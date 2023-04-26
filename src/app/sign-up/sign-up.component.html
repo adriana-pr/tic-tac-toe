@@ -1,0 +1,49 @@
+<div class="content-signUp" *ngIf="!success">
+  <app-menu-sign-insign-up></app-menu-sign-insign-up>
+<div class="signUp">
+  <div class="signUp-content">
+    <div class="form">
+      <form [formGroup]="form">
+        <label for="name">Nickname</label>
+        <input type="text" id="name" formControlName="name" placeholder="Enter Nickname">
+        <div class="error" *ngIf="form.get('name').hasError('required') && form.get('name').touched">
+          Please enter name!
+        </div>
+        <div class="error" *ngIf="form.get('name').hasError('minLength') && form.get('name').touched">
+          Minimum 3 characters are allowed!
+        </div>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" formControlName="email" placeholder="Enter your email">
+        <div class="error" *ngIf="form.get('email')?.hasError('required') && form.get('email')?.touched">
+          Please enter email!
+        </div>
+        <div class="error" *ngIf="form.get('email').hasError('email') && form.get('email').touched">
+          Email is incorrect!
+        </div>
+
+        <label for="password">Create a password</label>
+         <input type="password" id="password" formControlName="password" placeholder="Enter password" >
+         <div class="error" *ngIf="form.get('password').hasError('required') && form.get('password').touched">
+          Please enter password!
+        </div>
+        <div class="error" *ngIf="form.get('password').hasError('minLength') && form.get('password').touched">
+          Minimum 3 characters are allowed!
+        </div>
+
+        <button (click)="onSubmit()">Sign Up</button>
+      </form>
+    </div>
+    <div class="signIn">
+      <p>Already have an account?</p>
+      <a routerLink="/sign-in">
+        Sign In &#8594;
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="success" *ngIf="success">
+  <p>Registration was successful!</p>
+</div>

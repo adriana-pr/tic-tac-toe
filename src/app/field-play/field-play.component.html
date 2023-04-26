@@ -1,0 +1,37 @@
+<div class="content">
+    <div class="table-game">
+        <app-table-game [winnerX]="winnerX" [winnerO]="winnerO" (changed)="clearValues($event)"></app-table-game>
+    </div>
+    <div class="content-field">
+        <div class="field">
+            <div class="field-cell" *ngFor="let item of board; let i=index">
+                <app-field-cell (click)="onClickFieldCell(i)" [item]="item"></app-field-cell>
+            </div>
+            <div class="winner" *ngIf="winner">
+                <div class="winner-content">
+                    <p *ngIf="winner!=='draw'">
+                        Виграв:
+                    </p>
+                    <p *ngIf="winner=='draw'">
+                        Гра завершилася нічиєю!
+                    </p>
+                    <img src={{winner}} alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="text">
+            <p *ngIf="!winner && xNext;">
+                Хід: x
+            </p>
+            <p *ngIf="!winner && !xNext;">
+                Хід: 0
+            </p>
+        </div>
+        <div class="button" (click)="onClickCleanUp()">
+            <button *ngIf="!winner">Очистити</button>
+            <button class="continue" *ngIf="winner">Продовжити гру</button>
+        </div>
+
+    </div>
+</div>

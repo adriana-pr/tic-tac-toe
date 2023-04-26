@@ -1,0 +1,83 @@
+.content-record-result{
+   color: #313253;
+   font-weight: 700;
+   width: 50%;
+   min-height: 400px;
+   background-color: rgba(49, 50, 83, 0.4);
+   display: flex;
+   justify-content: center;
+   margin: 0 auto;
+   margin-top: 40px;
+   padding: 10px;
+}
+.record-result {
+    margin-top: 9%;
+}
+
+.record-result .user{
+    display: flex;
+    font-size: 19px;
+}
+.record-result .user .nickname{
+margin-right: 20px;
+
+}
+
+.content-record-result form{
+    display: flex;
+    flex-direction: column;
+}
+.content-record-result form  label{
+    margin-bottom: 5px;
+}
+.content-record-result form input[type="text"]{
+    width: 350px;
+    height: 35px;
+    background-color: #F5F1E7;
+    border-radius: 5px;
+    border: 1px solid rgb(97, 97, 97);
+    padding-left: 5px;
+    color: #313253;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.content-record-result form .winner{
+    margin-bottom: 15px;
+}
+.content-record-result form  button{
+    width: 350px;
+    background-color: #313253;
+    color: #F5F1E7;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    height: 35px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.content-record-result .radio-content p{
+   color: darkred;
+}
+
+.radio label{
+    margin-left: 10px;
+    margin-right: 5px;
+}
+@media screen and (max-width: 950px) {
+    .content-record-result {
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 615px) {
+    .content-record-result{
+      width: 100%;
+    }
+    .content-record-result form  button{
+        width: 300px;
+    }
+    .content-record-result form  input[type="text"]{
+        width: 300px;
+    }
+  }

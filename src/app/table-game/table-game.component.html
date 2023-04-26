@@ -1,0 +1,20 @@
+<div class="content">
+    <div class="table">
+        <div class="table-content">
+            <p>Кількість виграшів:</p>
+            <div class="cross">
+                <img src="../../assets/img/game-cross-icon.svg" alt="">
+                <span>{{winnerX}}</span>
+            </div>
+            <div class="null">
+                <img src="../../assets/img/game-null-icon.svg" alt="">
+                <span>{{winnerO}}</span>
+            </div>
+            <button (click)="cleanUp()">Очистити</button>
+        </div>
+    </div>
+    <div class="btn">
+       <p class="winnerNull" *ngIf="fieldMarkNull">Немає виграних партій</p>
+        <button (click)="recordResult()">Записати результат</button>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+.footer{
+    background-color:#313253 ;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 105%;
+    height: 100px;
+    color: aliceblue;
+    /* margin: 30px -10px -10px -10px; */
+ 
+}
+.footer-component{
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+.footer-logo{
+    margin-right: 10px;
+}
+.footer-network img{
+    margin-right: 5px;
+}
+.footer p{
+    font-size: 12px;
+   text-align:center;
+
+}

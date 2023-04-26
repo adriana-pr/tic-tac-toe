@@ -1,0 +1,28 @@
+<div class="menu">
+    <div class="menu-logo" routerLink="">
+        <img src="../../../../assets/img/cross.svg" alt="cross" class="logo">
+        <img src="../../../../assets/img/ellipse.svg" alt="ellipse" class="logo">
+    </div>
+    <div class="menu-button">
+        <a class="left" routerLink="">
+            <!-- <img src="../../../../assets/img/play.svg" alt="setting-menu"> -->
+            <span class="link__item"> Game room</span>
+        </a>
+        <a class="right" routerLink="leader-board">
+            <!-- <img src="../../../../assets/img/medal.svg" alt="setting-menu"> -->
+            <span class="link__item ">Leader board</span>
+        </a>
+    </div>
+    <div class="menu-setting" *ngIf="!(logIn.getLogin())">
+        <a class="sign-menu__link" routerLink="/sign-in">Sign In</a>
+        <span> / </span>
+        <a class="sign-menu__link" routerLink="/sign-up">Sign Up</a>
+    </div>
+
+    <div class="menu-setting" *ngIf="logIn.getLogin()" (click)="signOut()">
+        <a class="sign-menu__link" >Sign Out</a>
+    </div>
+</div>
+<div class="burger-menu">
+    <p>&#9776;</p>
+</div>

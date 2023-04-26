@@ -1,0 +1,28 @@
+.menu{
+    width: 350px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-around;
+   border-bottom: 1px solid #313253;
+   margin-top: 50px;
+}
+
+.signIn-menu, .signUp-menu{
+    width: 50%;
+    text-align: center;
+}
+
+.signIn-menu a, .signUp-menu a{
+    text-decoration: none;
+    font-size: 18px;
+  color: #9293A3;
+}
+.active{
+    width: 50%;
+    text-align: center;
+    border-bottom: 1px solid #313253;
+}
+.active a{
+    text-decoration: none;
+    color: #313253;
+}

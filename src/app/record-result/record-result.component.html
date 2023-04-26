@@ -1,0 +1,38 @@
+<div class="content-record-result">
+    <div class="record-result">
+        <div class="user">
+            <div class="nickname">
+                <p>Користувач:</p>
+                <p>{{users.nickname}}</p>
+            </div>
+            <div class="email">
+                <p>Email: </p>
+                <p>{{users.email}}</p>
+            </div>
+        </div>
+        <form [formGroup]="form">
+            
+                <label for="name">Введіть ім'я</label>
+                <input type="text" id="name" formControlName="name" placeholder="Name">
+           
+
+           <div class="winner">
+            <span class="number">Кількість перемог: </span>
+            <span *ngIf="form.value.mark=='X'">{{winnerX}}</span>
+            <span *ngIf="form.value.mark=='O'">{{winnerO}}</span>
+           </div>
+       
+            <div class="radio-content">
+               <div class="radio">
+                <label for="x">X</label><input id="x" type="radio" formControlName="mark" name="mark" value="X">
+                <label for="o">O</label><input id="o" type="radio" formControlName="mark" name="mark" value="O">
+               </div>
+                <p *ngIf="fieldMarkNull">Немає виграних партій</p>
+            </div>
+
+            <button (click)="record()">Записати</button>
+        </form>
+    </div>
+
+
+</div>

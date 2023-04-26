@@ -1,0 +1,14 @@
+<div class="leader-board">
+    <h2 class="leader-board-h2">Leader Board</h2>
+    <div class="leader-board-component">
+        <div class="player" *ngFor="let item of usersLeaderBoard" >
+            <img src={{item.img}} alt="">
+            <p>{{item.name}}</p>
+            <p>{{item.number}}</p>
+            <p>{{item.mark}}</p>
+            <div class="button">
+                <button (click)="deleteUser(item)" *ngIf="item.delete && logIn.getLogin()">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
