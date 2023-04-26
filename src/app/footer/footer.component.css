@@ -43,6 +43,7 @@
   }
   .ellipse:before {
     background-image: url("../../assets/img/white-ellipse.svg");
+    
     left: 20px;
     top: -15px;
   }

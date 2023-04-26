@@ -3,11 +3,17 @@
         <div class="table-content">
             <p>Кількість виграшів:</p>
             <div class="cross">
-                <img src="../../assets/img/game-cross-icon.svg" alt="">
+                <div class="crossImgDiv">
+               <div class="crossImg"></div>
+                </div>
+                <!-- <img src="../../assets/img/game-cross-icon.svg" alt=""> -->
                 <span>{{winnerX}}</span>
             </div>
             <div class="null">
-                <img src="../../assets/img/game-null-icon.svg" alt="">
+                <div class="nullImgDiv">
+                    <div class="nullImg"></div>
+                </div>
+                <!-- <img src="../../assets/img/game-null-icon.svg" alt=""> -->
                 <span>{{winnerO}}</span>
             </div>
             <button (click)="cleanUp()">Очистити</button>
