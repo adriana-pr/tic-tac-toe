@@ -8,6 +8,10 @@
    width: 50%;
    border-bottom: 2px solid #313253;
    font-weight: 700;
+   
+}
+.menu-logo{
+  width: 50px;
 }
 .menu a{
   text-decoration: none;
@@ -24,15 +28,30 @@
     position: relative;
     padding-left: 25px;
   }
-  .right::before,.left::before {
+  .logo-cross, .logo-ellipse{
+    position: relative;
+    margin-bottom: 15px;
+
+  }
+  .right::before,.left::before, .logo-cross:before, .logo-ellipse:before {
     position: absolute;
     content: '';
     top: 0;
     left: 0; 
     width: 20px;
     height: 20px;
+
   }
-  .right::before {
+
+.logo-cross:before {
+    background-image: url("../../assets/img/cross.svg");
+  }
+  .logo-ellipse:before {
+    background-image: url("../../assets/img/ellipse.svg");
+    left: 20px;
+    top: -15px;
+  }
+  .right::before{
     background-image: url("../../assets/img/medal.svg");
   }
 

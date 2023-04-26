@@ -14,14 +14,46 @@
     justify-content: center;
     padding-top: 25px;
 }
-.footer-logo{
-    margin-right: 10px;
+.footer-logo, .footer-network{
+    width: 50px;
 }
-.footer-network img{
-    margin-right: 5px;
-}
+
 .footer p{
     font-size: 12px;
    text-align:center;
 
 }
+
+.cross, .ellipse,.facebook, .instagram{
+    position: relative;
+    margin-bottom: 15px;
+  }
+.cross:before, .ellipse:before ,.facebook:before, .instagram:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0; 
+    width: 20px;
+    height: 20px;
+
+  }
+
+.cross:before {
+    background-image: url("../../assets/img/white-cross.svg");
+  }
+  .ellipse:before {
+    background-image: url("../../assets/img/white-ellipse.svg");
+    left: 20px;
+    top: -15px;
+  }
+
+  .facebook:before {
+    background-image: url("../../assets/img/facebook.svg");
+  }
+
+  .instagram:before {
+    background-image: url("../../assets/img/instagram.svg");
+    left: 25px;
+    top: -15px;
+    
+  }
