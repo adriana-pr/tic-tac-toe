@@ -18,7 +18,8 @@
 } 
 .table-game{
   align-self:flex-start;
-  margin-top: 10%;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .field{
   margin: 15px auto;
@@ -47,6 +48,8 @@ position: relative;
   border-radius: 5px;
   background-color: #313253;
   color: rgb(229, 228, 228);
+  position: relative;
+  z-index: 3;
 }
 .continue{
   margin-top: 35px;
@@ -60,8 +63,10 @@ position: relative;
   margin-top: -20px;
 }
 .winner{
-  background-color: rgba(146, 147, 163, 0.85);
+  background-color: rgba(49, 50, 83, 0.8);
+
   position: absolute;
+  z-index: 2;
   width: 110%;
   height: 110%;
   top: -5%;
@@ -69,6 +74,7 @@ position: relative;
   border-radius: 5px;
   display: flex;
   justify-content: center;
+
 }
 .winner-content{
   text-align: center;
@@ -76,11 +82,14 @@ position: relative;
 }
 .winner-content p{
   font-size: 30px;
-  color: #313253;
+  color: rgb(229, 228, 228);
   font-weight: 700;
+  
 }
-.winner-content img{
-  width: 100%;
+.winner-content .img{
+  font-size: 90px;
+  margin: 0;
+ 
 }
 @media screen and (max-width: 615px) {
   .content {

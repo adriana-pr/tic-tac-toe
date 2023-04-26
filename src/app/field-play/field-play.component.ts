@@ -17,12 +17,14 @@ export class FieldPlayComponent implements OnInit {
   constructor() { }
   ngOnInit(): void {
   }
+
   onClickFieldCell=(index:any)=>{
+
     const boardCopy = [...this.board]
     if(this.winner || boardCopy[index]){
       return;
     }
-    boardCopy[index] = this.xNext ?"../../assets/img/game-cross-icon.svg":"../../assets/img/game-null-icon.svg";
+    boardCopy[index] = this.xNext ?"X":"O";
     this.board = boardCopy; 
     this.xNext = !this.xNext;
     this.sign=boardCopy[index];
@@ -31,12 +33,17 @@ export class FieldPlayComponent implements OnInit {
     else if(this.winner && this.xNext) this.winnerO++;
     if(!this.board.includes(null))
     this.winner = "draw";
+
+    
   }
 
   onClickCleanUp=()=>{
+    console.log(this.winner);
+
     this.board = Array(9).fill(null);
     this.winner = calculateWinner(this.board);
     this.xNext=true
+    
   }
   clearValues=(newItems:any)=>{
     this.winnerX=newItems

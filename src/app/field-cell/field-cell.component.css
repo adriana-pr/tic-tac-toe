@@ -4,4 +4,15 @@ button{
     background-color:#DCC9B5;
     border: none;
     border-bottom: 1px solid #967552;
+    text-align: center;
+    position: relative;
+}
+.mark{
+    color: #313253;;
+    font-weight: 700;
+    font-size: 70px;
+    position: absolute;
+    z-index: 1;
+    bottom: -55%;
+    left: 25%;
 }
