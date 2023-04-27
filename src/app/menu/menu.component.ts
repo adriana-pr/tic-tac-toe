@@ -16,5 +16,6 @@ export class MenuComponent implements OnInit {
 
   signOut(){
     this.logIn.logout()
+    this.logIn.deleteLeaderBoard();
   }
 }

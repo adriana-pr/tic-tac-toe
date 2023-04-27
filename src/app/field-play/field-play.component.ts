@@ -33,13 +33,9 @@ export class FieldPlayComponent implements OnInit {
     else if(this.winner && this.xNext) this.winnerO++;
     if(!this.board.includes(null))
     this.winner = "draw";
-
-    
   }
 
   onClickCleanUp=()=>{
-    console.log(this.winner);
-
     this.board = Array(9).fill(null);
     this.winner = calculateWinner(this.board);
     this.xNext=true

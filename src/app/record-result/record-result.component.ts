@@ -84,7 +84,7 @@ export class RecordResultComponent implements OnInit {
           }
         )
         this.usersService.deleteLeaderBoard();
-        this.route.navigate(['leader-board']);
+        this.route.navigate(['']);
         // console.log(this.users);
       }
       

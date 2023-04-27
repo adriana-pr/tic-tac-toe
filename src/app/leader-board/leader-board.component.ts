@@ -32,8 +32,8 @@ export class LeaderBoardComponent implements OnInit {
             if (user.nickname == this.userFromStorage.nickname &&
               user.email == this.userFromStorage.email) {
               user['delete'] = true;
-              return user;
             }
+            return user;
           });
       });
     }
@@ -51,14 +51,15 @@ export class LeaderBoardComponent implements OnInit {
       this.userFromStorage = this.usersService.logIn();
       this.userFromStorage = JSON.parse(this.userFromStorage);
 
-      this.usersLeaderBoard = this.usersLeaderBoard.filter(
+      this.usersLeaderBoard.filter(
         (user: any) => {
           if (user.nickname == this.userFromStorage.nickname &&
             user.email == this.userFromStorage.email) {
             user['delete'] = true;
-            return user;
           }
+          return user;
         });
+        // console.log(this.usersLeaderBoard);
     }
     else {
       this.usersTemp = this.usersService.getLeaderBoardStorage();
